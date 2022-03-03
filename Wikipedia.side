@@ -1,0 +1,123 @@
+{
+  "id": "25799d73-c011-4b36-8f10-fab75205c76a",
+  "version": "2.0",
+  "name": "Wikipedia",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "1d6d2b36-608d-42f1-931b-61148fbc398e",
+    "name": "Open Home Page from Google Search",
+    "commands": [{
+      "id": "5086c957-0a17-4048-8ea9-459b796939a5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b5333ea-e933-4ff1-a740-c2c75eec2965",
+      "comment": "",
+      "command": "click",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "882304d0-5a81-4dde-8bac-d64d52cf52e2",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "wikipedia"
+    }, {
+      "id": "1e7a67a5-cee5-43c4-85af-7ada388f910c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "f8ff81a4-47a6-45d9-8e8e-6254c9b24fd3",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=a[href=\"https://www.wikipedia.org/\"]",
+      "targets": [
+        ["css=.g:nth-child(3) .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div[3]/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/a/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Wikipedia')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3fd5a99-32cb-4b84-8c76-ef2d55f68794",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[href=\"https://www.wikipedia.org/\"]",
+      "targets": [
+        ["css=.g:nth-child(2) .LC20lb", "css:finder"],
+        ["xpath=//div[@id='rso']/div[2]/div/div/div/a/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Wikipedia')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "001dbea2-c8fd-4505-a112-17b8ac9f6c24",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "pageurl"
+    }, {
+      "id": "3156e8ca-260d-4fcd-95e4-6a36b7b37c1f",
+      "comment": "",
+      "command": "echo",
+      "target": "The pageurl is ${pageurl}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84de9dca-211a-46e6-a14d-e086277fd019",
+      "comment": "",
+      "command": "store",
+      "target": "https://www.wikipedia.org/",
+      "targets": [],
+      "value": "homeurl"
+    }, {
+      "id": "ef40b5f9-14e5-4f92-8e83-163a9ac7a759",
+      "comment": "",
+      "command": "echo",
+      "target": "${homeurl} =  ${pageurl}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0a762f9-96a5-4645-8abd-d75832aa886b",
+      "comment": "",
+      "command": "assert",
+      "target": "pageurl",
+      "targets": [],
+      "value": "${homeurl}"
+    }]
+  }],
+  "suites": [{
+    "id": "b94be686-f621-4a1a-aae4-fe49ab5515d5",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1d6d2b36-608d-42f1-931b-61148fbc398e"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}
