@@ -188,7 +188,7 @@
       "value": ""
     }, {
       "id": "f4966b25-ec68-41fc-b0b5-a90f4a252a39",
-      "comment": "not head",
+      "comment": "not header",
       "command": "verifyElementNotPresent",
       "target": "css=.mw-head",
       "targets": [],
