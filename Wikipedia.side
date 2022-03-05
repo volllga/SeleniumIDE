@@ -120,6 +120,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "f905a1bb-bb1b-4e6f-a649-ca5d80ae7daf",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Wikipedia",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "a2c6154a-9872-4279-b514-dfe3f3845bf2",
       "comment": "text-logo slogan",
       "command": "verifyElementPresent",
@@ -191,6 +198,13 @@
       "comment": "not header",
       "command": "verifyElementNotPresent",
       "target": "css=.mw-head",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74c546ed-7c84-47d8-bf65-ecf898fcb177",
+      "comment": "close ",
+      "command": "//close",
+      "target": "",
       "targets": [],
       "value": ""
     }]
@@ -330,6 +344,126 @@
       "comment": "search input",
       "command": "verifyElementPresent",
       "target": "id=searchInput",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c032af1a-2160-4bfe-b8dd-d424383f61b2",
+    "name": "draft Serch from the Home page and scroll a result page",
+    "commands": [{
+      "id": "b50093cd-6c7a-4b13-b007-d46f17dab38e",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.wikipedia.org/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25f24def-35d7-4ed0-bd40-2e06abc0f876",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchLanguage",
+      "targets": [
+        ["id=searchLanguage", "id"],
+        ["css=#searchLanguage", "css:finder"],
+        ["xpath=//select[@id='searchLanguage']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/div/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'Afrikaans\nPolski\nSlovenčina\nالعربية\nAsturianu\nAzərbaycanca\nБългарски\nBân-lâm-gú / Hō-ló-oē\nবাংলা\nБеларуская\nCatalà\nČeština\nCymraeg\nDansk\nDeutsch\nEesti\nΕλληνικά\nEnglish\nEspañol\nEsperanto\nEuskara\nفارسی\nFrançais\nGalego\n한국어\nՀայերեն\nहिन्दी\nHrvatski\nBahasa Indonesia\nItaliano\nעברית\nქართული\nLatina\nLatviešu\nLietuvių\nMagyar\nМакедонски\nمصرى\nBahasa Melayu\nBahaso Minangkabau\nNederlands\n日本語\nNorsk (bokmål)\nNorsk (nynorsk)\nНохчийн\nOʻzbekcha / Ўзбекча\nPortuguês\nҚазақша / Qazaqşa / قازاقشا\nRomână\nРусский\nSimple English\nSinugboanong Binisaya\nSlovenščina\nСрпски / Srpski\nSrpskohrvatski / Српскохрватски\nSuomi\nSvenska\nதமிழ்\nТатарча / Tatarça\nภาษาไทย\nТоҷикӣ\nتۆرکجه\nTürkçe\nУкраїнська\nاردو\nTiếng Việt\nVolapük\nWinaray\n粵語\n中文\nမြန်မာဘာသာ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "97908ab1-d9eb-4721-95e3-d90f8a7a8434",
+      "comment": "",
+      "command": "select",
+      "target": "id=searchLanguage",
+      "targets": [],
+      "value": "label=English"
+    }, {
+      "id": "a4fd66ba-008d-4ac2-91e0-1f5ab12583be",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9df212d2-d680-4ddd-b31d-abd4b07cad08",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "whale"
+    }, {
+      "id": "c9c398c0-2727-4afd-9e18-f8a956435ef2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.svg-search-icon",
+      "targets": [
+        ["css=.svg-search-icon", "css:finder"],
+        ["xpath=//form[@id='search-form']/fieldset/button/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"],
+        ["xpath=//i[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "68f18868-a58b-4517-84ac-835c52f8a61d",
+      "comment": "scroll from to pixel value",
+      "command": "executeScript",
+      "target": "window.scrollTo(0,1500)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55de96e7-adaf-4244-a3d6-486138806ab8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.scrollBy(0,-1500)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a13f672-df92-472e-b3bf-7202edb88355",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=Bibliography",
+      "targets": [
+        ["id=Bibliography", "id"],
+        ["css=#Bibliography", "css:finder"],
+        ["xpath=//span[@id='Bibliography']", "xpath:attributes"],
+        ["xpath=//div[@id='mw-content-text']/div/h2[8]/span", "xpath:idRelative"],
+        ["xpath=//h2[8]/span", "xpath:position"]
+      ],
+      "value": "bibliography"
+    }, {
+      "id": "027241ca-40ef-465e-af74-8a0775fc1e3e",
+      "comment": "",
+      "command": "storeValue",
+      "target": "id=searchButton",
+      "targets": [
+        ["id=searchButton", "id"],
+        ["name=go", "name"],
+        ["css=#searchButton", "css:finder"],
+        ["xpath=//input[@id='searchButton']", "xpath:attributes"],
+        ["xpath=//div[@id='simpleSearch']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "serch_button"
+    }, {
+      "id": "522fc3b4-55b3-4cb4-a5e7-5baaa0ab0907",
+      "comment": "",
+      "command": "echo",
+      "target": "${serch_button}",
       "targets": [],
       "value": ""
     }]
