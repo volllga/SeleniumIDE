@@ -466,6 +466,190 @@
       "target": "${serch_button}",
       "targets": [],
       "value": ""
+    }, {
+      "id": "559b5f17-12ab-481f-b074-1be9fbcf8d25",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=firstHeading",
+      "targets": [
+        ["id=firstHeading", "id"],
+        ["css=#firstHeading", "css:finder"],
+        ["xpath=//h1[@id='firstHeading']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Whale')]", "xpath:innerText"]
+      ],
+      "value": "Whale"
+    }, {
+      "id": "54c41beb-f689-4420-8f66-38410331aad1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${search_result}.toLowerCase()",
+      "targets": [],
+      "value": "search_result"
+    }]
+  }, {
+    "id": "4e7ffbb1-0cb2-48cf-b61b-f9cb539c88bd",
+    "name": "Serch from the Home page(article is present, language)",
+    "commands": [{
+      "id": "31599a83-8dfe-435b-aa6b-31a7e71c520f",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.wikipedia.org/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "250b910c-043c-44e6-a1a4-cbecd3668777",
+      "comment": "",
+      "command": "store",
+      "target": "Киты",
+      "targets": [],
+      "value": "search_request"
+    }, {
+      "id": "fbdaa100-0fd8-4fc3-a48e-fb290bc5dfc9",
+      "comment": "",
+      "command": "store",
+      "target": "Русский",
+      "targets": [],
+      "value": "language_of_search"
+    }, {
+      "id": "7c93af77-b6cc-4893-8de3-e5eccc0bdd98",
+      "comment": "",
+      "command": "store",
+      "target": "ru",
+      "targets": [],
+      "value": "language_of_page"
+    }, {
+      "id": "371f4e0c-d4c5-436d-a251-8b480726cab1",
+      "comment": "",
+      "command": "echo",
+      "target": "${language_of_page}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "219139b0-415e-4e29-bc73-d87940b860e6",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchLanguage",
+      "targets": [
+        ["id=searchLanguage", "id"],
+        ["css=#searchLanguage", "css:finder"],
+        ["xpath=//select[@id='searchLanguage']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/div/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'Afrikaans\nPolski\nSlovenčina\nالعربية\nAsturianu\nAzərbaycanca\nБългарски\nBân-lâm-gú / Hō-ló-oē\nবাংলা\nБеларуская\nCatalà\nČeština\nCymraeg\nDansk\nDeutsch\nEesti\nΕλληνικά\nEnglish\nEspañol\nEsperanto\nEuskara\nفارسی\nFrançais\nGalego\n한국어\nՀայերեն\nहिन्दी\nHrvatski\nBahasa Indonesia\nItaliano\nעברית\nქართული\nLatina\nLatviešu\nLietuvių\nMagyar\nМакедонски\nمصرى\nBahasa Melayu\nBahaso Minangkabau\nNederlands\n日本語\nNorsk (bokmål)\nNorsk (nynorsk)\nНохчийн\nOʻzbekcha / Ўзбекча\nPortuguês\nҚазақша / Qazaqşa / قازاقشا\nRomână\nРусский\nSimple English\nSinugboanong Binisaya\nSlovenščina\nСрпски / Srpski\nSrpskohrvatski / Српскохрватски\nSuomi\nSvenska\nதமிழ்\nТатарча / Tatarça\nภาษาไทย\nТоҷикӣ\nتۆرکجه\nTürkçe\nУкраїнська\nاردو\nTiếng Việt\nVolapük\nWinaray\n粵語\n中文\nမြန်မာဘာသာ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b765c59-4f2b-4e66-8f48-587be0cfb811",
+      "comment": "",
+      "command": "select",
+      "target": "id=searchLanguage",
+      "targets": [],
+      "value": "label=${language_of_search}"
+    }, {
+      "id": "de0732c4-365d-42bf-adb8-c4e481df0414",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04500d9e-eaba-4f02-bb15-e9512a99d2c7",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${search_request}"
+    }, {
+      "id": "99217794-36e9-4a1f-bcbd-9afbb5e15ada",
+      "comment": "",
+      "command": "click",
+      "target": "css=.svg-search-icon",
+      "targets": [
+        ["css=.svg-search-icon", "css:finder"],
+        ["xpath=//form[@id='search-form']/fieldset/button/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"],
+        ["xpath=//i[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76513fba-ed42-4a9b-b777-e7b9bc8965ee",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=firstHeading",
+      "targets": [
+        ["id=firstHeading", "id"],
+        ["css=#firstHeading", "css:finder"],
+        ["xpath=//h1[@id='firstHeading']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Whale')]", "xpath:innerText"]
+      ],
+      "value": "search_result"
+    }, {
+      "id": "9a3b343c-4787-4a39-baf9-f3d0cc5d39bb",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=firstHeading",
+      "targets": [],
+      "value": "${search_request}"
+    }, {
+      "id": "912e08f8-50f5-48fc-83f6-46ce68d61b06",
+      "comment": "",
+      "command": "verify",
+      "target": "search_result",
+      "targets": [],
+      "value": "${search_request}"
+    }, {
+      "id": "2df40042-edba-466c-a478-d6a947fab59a",
+      "comment": "",
+      "command": "echo",
+      "target": "${search_result} = ${search_request}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5245f430-641b-4e77-8cd5-1e27251b0b75",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "page_url"
+    }, {
+      "id": "23d44e90-2b23-406d-82ba-86e817993272",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "xpath=//html@lang",
+      "targets": [],
+      "value": "lang"
+    }, {
+      "id": "bd81522a-7477-45d8-9974-f8064aa6f12f",
+      "comment": "",
+      "command": "verify",
+      "target": "language_of_page",
+      "targets": [],
+      "value": "${lang}"
+    }, {
+      "id": "8787f4f4-6f20-4ca2-acaa-d8bc07605746",
+      "comment": "",
+      "command": "echo",
+      "target": "${lang}",
+      "targets": [],
+      "value": ""
     }]
   }],
   "suites": [{
