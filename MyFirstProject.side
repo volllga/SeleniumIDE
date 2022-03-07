@@ -1,0 +1,144 @@
+{
+  "id": "55eab3cf-f76b-4a6e-b492-b9237a391717",
+  "version": "2.0",
+  "name": "MyFirstProject",
+  "url": "https://the-internet.herokuapp.com/",
+  "tests": [{
+    "id": "f7096d6c-bb89-475c-bfb9-bb41bd78e000",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "59840425-14ed-4e66-9194-d6672372140b",
+    "name": "Waint For",
+    "commands": [{
+      "id": "abf68f0b-dc6f-4863-a0d0-2252e373df84",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "966757e0-8cbd-4d60-946f-d6853d48371f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Dynamic Loading",
+      "targets": [
+        ["linkText=Dynamic Loading", "linkText"],
+        ["css=li:nth-child(14) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Dynamic Loading')]", "xpath:link"],
+        ["xpath=//div[@id='content']/ul/li[14]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/dynamic_loading')]", "xpath:href"],
+        ["xpath=//li[14]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Dynamic Loading')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a8d69a2-7629-49dd-b01b-57ec01232eb8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Example 1: Element on page that is hidden",
+      "targets": [
+        ["linkText=Example 1: Element on page that is hidden", "linkText"],
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Example 1: Element on page that is hidden')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/dynamic_loading/1')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Example 1: Element on page that is hidden')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2aa0fac0-2094-4cd8-9f8d-eca7c51107cf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Start')]",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//div[@id='start']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Start')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "352a34f4-5498-438b-81f7-7e42ca603f9d",
+      "comment": "",
+      "command": "waitForElementNotVisible",
+      "target": "xpath=//h4[contains(.,'Hello World!')]",
+      "targets": [
+        ["css=h4:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='finish']/h4", "xpath:idRelative"],
+        ["xpath=//div[3]/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Hello World!')]", "xpath:innerText"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "d633ffc1-8df0-487f-89a8-85e6e6ffdd9a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h4:nth-child(1)",
+      "targets": [
+        ["css=h4:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='finish']/h4", "xpath:idRelative"],
+        ["xpath=//div[3]/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Hello World!')]", "xpath:innerText"]
+      ],
+      "value": "Hello World!"
+    }, {
+      "id": "e6398e42-2bd0-407e-9935-4fdef6fab8f8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[@href='http://elementalselenium.com/']",
+      "targets": [
+        ["linkText=Elemental Selenium", "linkText"],
+        ["css=.large-4 a", "css:finder"],
+        ["xpath=//a[contains(text(),'Elemental Selenium')]", "xpath:link"],
+        ["xpath=//div[@id='page-footer']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://elementalselenium.com/']", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Elemental Selenium')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win2932",
+      "windowTimeout": 2000
+    }, {
+      "id": "c5a2e25f-c93e-4321-badb-a782d87e1eef",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f50eb031-0a8d-411f-8fa3-326a15af860c",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win2932}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bffbdd50-f0c3-469b-bb9e-0e0a2742aa76",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2404385c-0108-4c09-ae2b-0ee622cc9812",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "25def6ff-9563-4e1f-9ec9-e95e5f229d50",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f7096d6c-bb89-475c-bfb9-bb41bd78e000"]
+  }],
+  "urls": ["https://the-internet.herokuapp.com/"],
+  "plugins": []
+}
