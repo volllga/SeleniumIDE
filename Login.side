@@ -2,22 +2,15 @@
   "id": "b7f8a701-3d5a-492c-a594-5d5d859ce44e",
   "version": "2.0",
   "name": "Login",
-  "url": "https://www.phptravels.net/login",
+  "url": "https://www.phptravels.net/",
   "tests": [{
     "id": "69229a62-745b-4e55-961e-079166d2dc16",
-    "name": "Login Test",
+    "name": "LoginTest",
     "commands": [{
       "id": "130e53a0-759d-473f-bf61-0b4f4e666511",
       "comment": "",
       "command": "open",
-      "target": "https://www.phptravels.net/login",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "7f055350-731d-4105-8b5f-fdd69f0ccda4",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1119x659",
+      "target": "/login",
       "targets": [],
       "value": ""
     }, {
@@ -45,7 +38,7 @@
         ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "mmm@gmail.com"
+      "value": "${user_email}"
     }, {
       "id": "ed9acfa1-58b1-4aa8-92cc-13e8acaaca17",
       "comment": "",
@@ -71,7 +64,7 @@
         ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[2]/div/input", "xpath:idRelative"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": "simple123"
+      "value": "${user_password}"
     }, {
       "id": "5f9a1356-1784-4694-9bd0-7dc5be9652f7",
       "comment": "",
@@ -88,10 +81,307 @@
     }, {
       "id": "45f15d19-1d3c-415e-843b-ee7e873e1ed0",
       "comment": "",
+      "command": "//assertText",
+      "target": "css=.alert",
+      "targets": [],
+      "value": "Wrong credentials. try again!"
+    }]
+  }, {
+    "id": "df565040-dce9-419d-ad61-968d328230a4",
+    "name": "InvalidCredentials",
+    "commands": [{
+      "id": "b0a18234-63b5-4286-a632-056c8b012286",
+      "comment": "",
+      "command": "store",
+      "target": "abc@google.com",
+      "targets": [],
+      "value": "user_email"
+    }, {
+      "id": "9f4328af-b461-4433-af30-f30016ae7b4a",
+      "comment": "",
+      "command": "store",
+      "target": "simple123",
+      "targets": [],
+      "value": "user_password"
+    }, {
+      "id": "8207d193-38ee-4799-86f6-73879db712a7",
+      "comment": "",
+      "command": "run",
+      "target": "LoginTest",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c8f1b9d-e05c-4976-b915-283697076773",
+      "comment": "",
       "command": "assertText",
       "target": "css=.alert",
       "targets": [],
       "value": "Wrong credentials. try again!"
+    }]
+  }, {
+    "id": "fe46fdd2-9392-4e5b-ae09-b509386ceb30",
+    "name": "SignupTest",
+    "commands": [{
+      "id": "7f89f874-c7d2-4626-8e28-5b9d5524a02d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21792457-c7ee-49d2-a681-02094d85c457",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Signup",
+      "targets": [
+        ["linkText=Signup", "linkText"],
+        ["css=.theme-btn:nth-child(5)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Signup')])[3]", "xpath:link"],
+        ["xpath=//body[@id='fadein']/header/div/div/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.phptravels.net/signup')])[3]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c00ad46d-4976-407f-a24b-98d76e3c5513",
+      "comment": "",
+      "command": "click",
+      "target": "name=first_name",
+      "targets": [
+        ["name=first_name", "name"],
+        ["css=.input-box:nth-child(2) .form-control", "css:finder"],
+        ["xpath=//input[@name='first_name']", "xpath:attributes"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eef9831c-2e99-4b93-8f9c-b2f3a96076b2",
+      "comment": "",
+      "command": "type",
+      "target": "name=first_name",
+      "targets": [
+        ["name=first_name", "name"],
+        ["css=.input-box:nth-child(2) .form-control", "css:finder"],
+        ["xpath=//input[@name='first_name']", "xpath:attributes"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Ivan"
+    }, {
+      "id": "c1dc02d3-ae03-4510-8c4f-36d7f57b66af",
+      "comment": "",
+      "command": "click",
+      "target": "name=last_name",
+      "targets": [
+        ["name=last_name", "name"],
+        ["css=.input-box:nth-child(3) .form-control", "css:finder"],
+        ["xpath=//input[@name='last_name']", "xpath:attributes"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75d543a7-c573-4fa2-84c2-984901148911",
+      "comment": "",
+      "command": "type",
+      "target": "name=last_name",
+      "targets": [
+        ["name=last_name", "name"],
+        ["css=.input-box:nth-child(3) .form-control", "css:finder"],
+        ["xpath=//input[@name='last_name']", "xpath:attributes"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Ivanov"
+    }, {
+      "id": "3aee347f-c471-4261-a096-62e389420a39",
+      "comment": "",
+      "command": "click",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.input-box:nth-child(4) .form-control", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c98893c-09fa-42d1-8dc4-f0aaae34b98b",
+      "comment": "",
+      "command": "type",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.input-box:nth-child(4) .form-control", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "+375333454545"
+    }, {
+      "id": "12479c46-bbdc-4e56-afef-a3ee99f1cf82",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.input-box:nth-child(5) .form-control", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1400efd3-000c-4e94-987b-2ccad7d17919",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.input-box:nth-child(5) .form-control", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "abcd@gmail.com"
+    }, {
+      "id": "d3282da0-47c0-4f25-a1c2-9b057c8e1565",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.input-box:nth-child(6) .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10081b6b-e556-45a0-8186-b61fb0c3692a",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.input-box:nth-child(6) .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": "mypass0987"
+    }, {
+      "id": "306f78f6-c79f-43eb-98a4-cbe80c4135ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=fadein",
+      "targets": [
+        ["id=fadein", "id"],
+        ["css=#fadein", "css:finder"],
+        ["xpath=//body[@id='fadein']", "xpath:attributes"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "348d1fa7-3119-495f-8be6-a5a27234c8b0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn-default > .ladda-label",
+      "targets": [
+        ["css=.btn-default > .ladda-label", "css:finder"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[7]/button/span", "xpath:idRelative"],
+        ["xpath=//div[7]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Signup')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf8b513d-c840-4437-8c68-a4e02ee8d4a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-default > .ladda-label",
+      "targets": [
+        ["css=.btn-default > .ladda-label", "css:finder"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[7]/button/span", "xpath:idRelative"],
+        ["xpath=//div[7]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Signup')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9882e581-e8dd-46f0-9d74-feeedefc8253",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn-default > .ladda-label",
+      "targets": [
+        ["css=.btn-default > .ladda-label", "css:finder"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[7]/button/span", "xpath:idRelative"],
+        ["xpath=//div[7]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Signup')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "89c8c0e3-bc04-4689-aefa-478c4538d33c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.singup",
+      "targets": [],
+      "value": "Signup successfull please login."
+    }]
+  }, {
+    "id": "8ab8221c-5d27-497e-b3b4-c9d86a186be5",
+    "name": "ValidCredentials2",
+    "commands": [{
+      "id": "0dacf54f-4b53-4d0d-8ae6-62955cfe5edb",
+      "comment": "",
+      "command": "store",
+      "target": "abcd@gmail.com",
+      "targets": [],
+      "value": "user_email"
+    }, {
+      "id": "e21a389b-6da2-42bd-bf8b-bcfdbaa0626c",
+      "comment": "",
+      "command": "store",
+      "target": "mypass0987",
+      "targets": [],
+      "value": "user_password"
+    }, {
+      "id": "f3aa2e47-b277-4cac-b899-d12fe59c9c78",
+      "comment": "",
+      "command": "run",
+      "target": "LoginTest",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb87355a-b2c5-4e93-ac08-297d6ff2fe06",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.author__title",
+      "targets": [
+        ["css=.author-bio", "css:finder"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Ivan"
+    }, {
+      "id": "26bfeec2-9c63-4898-86e6-f6cc6905030d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78d423da-9b75-4f93-8a4e-2bca09222788",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.btn-default > .ladda-label",
+      "targets": [
+        ["css=.btn-default > .ladda-label", "css:finder"],
+        ["xpath=//body[@id='fadein']/div/div/div[2]/div[2]/div/form/div[3]/button/span", "xpath:idRelative"],
+        ["xpath=//div[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": "Login"
     }]
   }],
   "suites": [{
@@ -102,6 +392,6 @@
     "timeout": 300,
     "tests": []
   }],
-  "urls": ["https://www.phptravels.net/login"],
+  "urls": ["https://www.phptravels.net/login", "https://www.phptravels.net/"],
   "plugins": []
 }

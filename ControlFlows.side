@@ -1,0 +1,181 @@
+{
+  "id": "e1fc2eec-e460-422c-96bb-ecc7f7de31ad",
+  "version": "2.0",
+  "name": "ControlFlows",
+  "url": "https://www.calculator.net/",
+  "tests": [{
+    "id": "a10c2740-b8e0-4ad5-b23a-50f6f17a2960",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "3c286735-4daf-4a3c-a0c6-fd9b432514cb",
+    "name": "CalorieCalculatorTest",
+    "commands": [{
+      "id": "ab8b8d8c-d8f9-4194-949b-903d0d42d243",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.calculator.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d729a0a7-e037-4b46-995b-21cd3a3c5c16",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Calorie Calculator",
+      "targets": [
+        ["linkText=Calorie Calculator", "linkText"],
+        ["css=#hl2 > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Calorie Calculator')]", "xpath:link"],
+        ["xpath=//ul[@id='hl2']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/calorie-calculator.html')]", "xpath:href"],
+        ["xpath=//td[2]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Calorie Calculator')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f685728-5cbd-4cdd-a5cc-f95c9b2f1078",
+      "comment": "",
+      "command": "click",
+      "target": "id=cage",
+      "targets": [
+        ["id=cage", "id"],
+        ["name=cage", "name"],
+        ["css=#cage", "css:finder"],
+        ["xpath=//input[@id='cage']", "xpath:attributes"],
+        ["xpath=//table[@id='calinputtable']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f84e2a99-4a04-41e4-ae51-cd35276d9e6c",
+      "comment": "",
+      "command": "type",
+      "target": "id=cage",
+      "targets": [],
+      "value": "45"
+    }, {
+      "id": "76ada799-91f4-43b1-b93b-402bea1f6d4b",
+      "comment": "",
+      "command": "click",
+      "target": "id=cheightmeter",
+      "targets": [
+        ["id=cheightmeter", "id"],
+        ["name=cheightmeter", "name"],
+        ["css=#cheightmeter", "css:finder"],
+        ["xpath=//input[@id='cheightmeter']", "xpath:attributes"],
+        ["xpath=//table[@id='metricheightweight']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//table[3]/tbody/tr/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ff9ab3d-cfe2-4140-9702-f2d5003423a9",
+      "comment": "",
+      "command": "type",
+      "target": "id=cheightmeter",
+      "targets": [
+        ["id=cheightmeter", "id"],
+        ["name=cheightmeter", "name"],
+        ["css=#cheightmeter", "css:finder"],
+        ["xpath=//input[@id='cheightmeter']", "xpath:attributes"],
+        ["xpath=//table[@id='metricheightweight']/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//table[3]/tbody/tr/td[2]/input", "xpath:position"]
+      ],
+      "value": "173"
+    }, {
+      "id": "f081791a-c8c6-43c4-871a-9768dabd8341",
+      "comment": "",
+      "command": "click",
+      "target": "id=ckg",
+      "targets": [
+        ["id=ckg", "id"],
+        ["name=ckg", "name"],
+        ["css=#ckg", "css:finder"],
+        ["xpath=//input[@id='ckg']", "xpath:attributes"],
+        ["xpath=//tr[@id='metricweight']/td[2]/input", "xpath:idRelative"],
+        ["xpath=//table[3]/tbody/tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ff65819-c7c9-4a79-ba5b-cd1f2dd8a95a",
+      "comment": "",
+      "command": "type",
+      "target": "id=ckg",
+      "targets": [
+        ["id=ckg", "id"],
+        ["name=ckg", "name"],
+        ["css=#ckg", "css:finder"],
+        ["xpath=//input[@id='ckg']", "xpath:attributes"],
+        ["xpath=//tr[@id='metricweight']/td[2]/input", "xpath:idRelative"],
+        ["xpath=//table[3]/tbody/tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "67"
+    }, {
+      "id": "8b0ddfc1-0404-4150-b5cb-fbb19d0c8586",
+      "comment": "",
+      "command": "click",
+      "target": "id=cactivity",
+      "targets": [
+        ["id=cactivity", "id"],
+        ["name=cactivity", "name"],
+        ["css=#cactivity", "css:finder"],
+        ["xpath=//select[@id='cactivity']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[5]/table[4]/tbody/tr/td[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "459549bf-7eac-4222-91c6-8ae8281b6d58",
+      "comment": "",
+      "command": "select",
+      "target": "id=cactivity",
+      "targets": [],
+      "value": "label=Light: exercise 1-3 times/week"
+    }, {
+      "id": "9f742ab7-0fa9-46e8-90f9-96f4cca17d5b",
+      "comment": "",
+      "command": "click",
+      "target": "css=td:nth-child(2) > input:nth-child(2)",
+      "targets": [
+        ["css=td:nth-child(2) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='Calculate']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[5]/table[4]/tbody/tr[3]/td[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0917f9f5-d796-4079-b2ae-f27e2af689c7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.h2result",
+      "targets": [
+        ["css=.h2result", "css:finder"],
+        ["xpath=//div[@id='content']/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Result')]", "xpath:innerText"]
+      ],
+      "value": "Result"
+    }, {
+      "id": "ddd7350d-4e36-45a5-a928-acf34e78ed4b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=table:nth-child(6) tr:nth-child(1) b",
+      "targets": [
+        ["css=table:nth-child(6) tr:nth-child(1) b", "css:finder"],
+        ["xpath=//div[@id='content']/table/tbody/tr/td[2]/div/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'2,105')]", "xpath:innerText"]
+      ],
+      "value": "2,105"
+    }]
+  }],
+  "suites": [{
+    "id": "27fa58d9-6c89-4124-897c-8044ece5eef7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a10c2740-b8e0-4ad5-b23a-50f6f17a2960"]
+  }],
+  "urls": ["https://www.calculator.net/"],
+  "plugins": []
+}
