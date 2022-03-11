@@ -167,14 +167,259 @@
       ],
       "value": "2,105"
     }]
+  }, {
+    "id": "1955e6a1-2515-4ee9-9c16-5e17f573e0ae",
+    "name": "IfConditions",
+    "commands": [{
+      "id": "6ffc17ee-1d27-47e2-8453-cbb7e18bc6ee",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.calculator.net/calorie-calculator.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6811928-7540-4100-b8aa-b2f89a8550a5",
+      "comment": "",
+      "command": "store",
+      "target": "m",
+      "targets": [],
+      "value": "varGender"
+    }, {
+      "id": "0db3a839-ed42-4399-848f-a533840aa57d",
+      "comment": "",
+      "command": "if",
+      "target": "${varGender}===\"f\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cb8c1281-163e-4249-8fc7-6471bec5f506",
+      "comment": "",
+      "command": "click",
+      "target": "css=td > .cbcontainer:nth-child(2) > .rbmark",
+      "targets": [
+        ["css=td > .cbcontainer:nth-child(2) > .rbmark", "css:finder"],
+        ["xpath=//table[@id='calinputtable']/tbody/tr[2]/td[2]/label[2]/span", "xpath:idRelative"],
+        ["xpath=//label[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32c82c86-fe75-4dcc-b867-1974de7edab0",
+      "comment": "",
+      "command": "click",
+      "target": "id=cactivity",
+      "targets": [
+        ["id=cactivity", "id"],
+        ["name=cactivity", "name"],
+        ["css=#cactivity", "css:finder"],
+        ["xpath=//select[@id='cactivity']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[5]/table[4]/tbody/tr/td[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "83ac20cc-dfb5-4ccd-9605-e35e6c6e6ee1",
+      "comment": "",
+      "command": "select",
+      "target": "id=cactivity",
+      "targets": [],
+      "value": "label=Very Active: intense exercise 6-7 times/week"
+    }, {
+      "id": "1e5efe6e-04a6-4a99-b8d2-2da6eb2469f2",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9bc69931-ed4b-4bd2-972c-f97dce80cfab",
+      "comment": "",
+      "command": "click",
+      "target": "css=td > .cbcontainer:nth-child(1) > .rbmark",
+      "targets": [
+        ["css=td > .cbcontainer:nth-child(1) > .rbmark", "css:finder"],
+        ["xpath=//table[@id='calinputtable']/tbody/tr[2]/td[2]/label/span", "xpath:idRelative"],
+        ["xpath=//label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11885519-09a0-474a-9101-a2780335dd11",
+      "comment": "",
+      "command": "select",
+      "target": "id=cactivity",
+      "targets": [],
+      "value": "label=Light: exercise 1-3 times/week"
+    }, {
+      "id": "a489c3db-94a6-4d5e-993f-fa0695c4f41d",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5675ff12-7e0d-422d-843e-ffa3d68ae3df",
+    "name": "WhileLoop",
+    "commands": [{
+      "id": "837a0527-2569-4ae2-9814-f006b45a387a",
+      "comment": "",
+      "command": "//open",
+      "target": "https://www.calculator.net/calorie-calculator.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec43ff5e-22ca-44ef-a095-07d8dc2d65c5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "94f974c3-e228-444a-b6a8-50e4687e7c65",
+      "comment": "",
+      "command": "echo",
+      "target": "${counter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "deb60707-b080-43b3-85e9-e5a9530b85d9",
+      "comment": "",
+      "command": "while",
+      "target": "${counter} < 11",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8181547-4a84-47b5-ab0c-a8d7fe56433b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${counter} + 2",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "58ce6a44-b960-483b-a538-a916b19c2dfc",
+      "comment": "",
+      "command": "echo",
+      "target": "${counter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "650e813a-3152-45ae-8124-c58e2da1dafe",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "560a6200-d8c8-48f7-8182-30f8ff3702e8",
+    "name": "DoLoop",
+    "commands": [{
+      "id": "7de03d69-8fe1-4504-915e-3e999d448001",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "13b6fb3e-618a-438e-8475-184c8ed053d6",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e7c0694-f536-457a-b4bb-025ae3c45079",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${counter}+10",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "26eeaeb0-272c-4cc3-8f14-b056ebd9d889",
+      "comment": "",
+      "command": "echo",
+      "target": "${counter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f28fcaa8-f87e-41d1-a8c7-e5604b65d783",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${counter}<31",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa334e4e-fa68-46a5-b20c-3c8e59f8001a",
+      "comment": "",
+      "command": "echo",
+      "target": "Counter value is ${counter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e66ad494-1b52-4416-8a12-7b5c1acdc9a3",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c7675cb3-7eef-468f-a735-1de95f0ad1b1",
+    "name": "TimesLoop",
+    "commands": [{
+      "id": "61faa14a-ba9f-495d-84c0-89765321ab16",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 50",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "aaf51a4d-add4-4a6d-9bcf-a34ea0db4f7f",
+      "comment": "",
+      "command": "times",
+      "target": "3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a880b28-58d0-4d12-8ed0-0e378f2ee471",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${counter} / 5",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "83c4f441-4ef1-423f-a844-4e9486ae062a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6894948e-90f9-4bf4-aeb7-cad6b243b29a",
+      "comment": "",
+      "command": "echo",
+      "target": "The counter value is ${counter}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1aaf28e9-8bb4-49bc-a64c-91ff9e260868",
+    "name": "Documentation",
+    "commands": [{
+      "id": "817fe435-7f00-4142-b781-048f6a989d72",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "27fa58d9-6c89-4124-897c-8044ece5eef7",
-    "name": "Default Suite",
+    "name": "ControlFlowTestSuite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["a10c2740-b8e0-4ad5-b23a-50f6f17a2960"]
+    "tests": ["1955e6a1-2515-4ee9-9c16-5e17f573e0ae", "c7675cb3-7eef-468f-a735-1de95f0ad1b1", "5675ff12-7e0d-422d-843e-ffa3d68ae3df", "560a6200-d8c8-48f7-8182-30f8ff3702e8"]
   }],
   "urls": ["https://www.calculator.net/"],
   "plugins": []
